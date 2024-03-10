@@ -1,0 +1,40 @@
+Trebuie sa aveti un fisier numit constants.py care sa contina informatiile bazei de date. 
+
+Structura baza de date:
+Acces: 
+	-Id: int 
+	-Id_Persoana: int 
+	-Data: datetime/timestamp
+	-Sens: varchar(3) ['in' sau 'out']
+	-Poarta: int [contine numarul portii la care s-a facut inregistrarea] 
+
+Persoane: 
+	-Id: int 
+	-Nume: Varchar(50) 
+	-Prenume: Varchar(50)
+	-Companie: Varchar(50)
+	-IdManager: int 
+	-Email: Varchar(50)
+
+Puteti adauga coloane la tabelele mentionate insa acestea trebuie neaparat sa existe. 
+
+Teste:
+main.py 1 /cale/catre/fisier  
+  -test 1.1
+	  - se incarca un fisier txt Poarta1.txt
+	  - se incarca un fisier csv Poarta2.csv 
+	  - se verifica daca acestea sunt procesate iar inregistrarile sunt stocate in baza de date 
+  -test 1.2
+	  - se verifica daca au fost copiate fisierele in directorul backup si redenumite corect
+  	  - se verifica daca fisierele au fost sterse din fisierul sursa 
+main.py 2  
+  -test 2.1
+	  - se creeaza un request catre serverul pe care voi il veti crea
+	  - se verifica in baza de date daca utilizatorul a fost creat corect 
+  -test 2.2
+      - se creeaza 10 requesturi catre server 
+	  - se verifica daca datele au fost corect inregistrate in baza de date 
+main.py 3 
+  -test 3.1 
+	  - se verifica daca angajatii care nu au lucrat suficient sunt calculati corect 
+	  - se verifica daca fisierele csv si txt sunt scrise corect 
